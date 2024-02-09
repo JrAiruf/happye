@@ -1,5 +1,5 @@
 import 'package:happye/src/imports.dart';
-import 'package:happye/src/modules/events/views/components/home_events_list.dart';
+import 'package:happye/src/modules/events/views/components/frequented_events_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
               child: ListView(
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
-                  SizedBox(height: height * 0.04),
+                  SizedBox(height: height * 0.03),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -41,10 +41,31 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.w300,
                         ),
                       ),
-                      AddButton(title: "Adicionar", onTap: (){}),
+                      AddButton(title: "Adicionar", onTap: () {}),
                     ],
                   ),
-                  HomeEventsList()
+                  SizedBox(height: height * 0.05),
+                  const Text(
+                    "Confira os próximos eventos",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  SizedBox(height: height * 0.02),
+                  const HomeEventsList(),
+                  SizedBox(height: height * 0.02),
+                  const Text(
+                    "Eventos que participei:",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  SizedBox(height: height * 0.02),
+                  const FrequentedEventsList()
                 ],
               ),
             ),
