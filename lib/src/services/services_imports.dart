@@ -1,0 +1,1 @@
+export 'package:happye/src/services/app_client/iapp_client.dart';
