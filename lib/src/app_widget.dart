@@ -7,7 +7,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Modular.setInitialRoute("/events/");
     return MaterialApp.router(
-      debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner: false,
       routerConfig: Modular.routerConfig,
     );
   }

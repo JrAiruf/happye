@@ -8,20 +8,22 @@ class FrequentedEventsList extends StatelessWidget {
     final height = MediaQuery.sizeOf(context).height;
     final width = MediaQuery.sizeOf(context).width;
     return SizedBox(
-      height: height * 0.25,
+      height: height * 0.23,
       width: width,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 8,
         itemBuilder: (_, i) {
-          return SizedBox(
-            height: height * 0.25,
-            width: width * 0.4,
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: SizedBox(
+              width: width * 0.37,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                elevation: 15,
               ),
-              elevation: 15,
             ),
           );
         },
