@@ -18,7 +18,10 @@ class AddButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        color: backgroundColor ?? Colors.black,
+        decoration: BoxDecoration(
+          color: backgroundColor ?? Colors.black,
+          borderRadius: BorderRadius.circular(10),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(

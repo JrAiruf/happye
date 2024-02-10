@@ -24,7 +24,7 @@ class HappyeNavBar extends StatelessWidget {
             },
             iconSize: 30,
             backgroundColor: Colors.black,
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 label: "Eventos",
                 icon: Icon(

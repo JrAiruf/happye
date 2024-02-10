@@ -75,10 +75,38 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: height,
                   width: width,
-                  color: Colors.deepPurple,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.02),
+                    child: ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        SizedBox(height: height * 0.02),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Olá, $userName!",
+                            style: const TextStyle(
+                              fontSize: 35,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: height * 0.07),
+                        const SpeakersList(),
+                        SizedBox(height: height * 0.07),
+                        Align(
+                            alignment: Alignment.centerRight,
+                            child: AddButton(
+                              title: "Adicionar",
+                              onTap: () {},
+                            )),
+                      ],
+                    ),
+                  ),
                 ),
                 Container(
                   height: height,

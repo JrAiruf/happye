@@ -1,0 +1,1 @@
+export 'package:happye/src/modules/speakers/presenter/components/speakers_list.dart';
